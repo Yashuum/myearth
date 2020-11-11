@@ -1,0 +1,143 @@
+body, html {
+  height: 100%;
+  margin: 0; 
+  padding: 0;
+}
+
+body {
+ font-family: sans-serif;
+  text-align: center; 
+  background: -webkit-radial-gradient(
+    #407BAB, 
+    #214154,
+    #13242F
+    );
+}
+
+h1 {
+  color: #EEE; 
+  text-align: center;
+}
+
+
+
+.nubes, .mapa {
+   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+
+.nubes {
+  width: 600px;
+  height: 600px; 
+}
+
+
+.mapa {
+  width: 350px;
+  height: 350px;
+  background: lightblue;
+  border-radius: 50%;
+  box-shadow: 
+    -30px -20px 0 0 rgba(0,0,0,.1) inset,
+    -70px -40px 0 0 rgba(0,0,0,.1) inset,
+    5px 5px 0 0 rgba(255, 255, 255, .2) inset; 
+background: url(https://www.aericanempire.com/images/flagearth.jpg);
+background-size: cover;  
+
+-webkit-animation: tierra-girando 5s infinite linear;
+  
+}
+
+@-webkit-keyframes tierra-girando {
+  from {
+    background-position: left center;
+  }
+  to {
+    background-position: -396px center;
+  }
+}
+
+/*ESTRELLAS*/
+.estrella {
+  width: 2px;
+  height: 2px;
+  background: #FFF;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.primera {
+  top: 20%;
+  left: 50%;
+}
+
+.segunda {
+  top: 30%;
+  left: 30%;
+}
+
+.tercera {
+  top: 90%;
+  left: 90%;
+}
+
+.cuarta {
+  top: 80%;
+  left: 20%;
+}
+
+.quinta {
+  top: 30%;
+  left: 80%;
+}
+.sexta {
+  top: 70%;
+  left: 80%;
+}
+
+.octava {
+  top: 80%;
+  left: 50%;
+}
+
+.novena {
+  top: 35%;
+  left: 10%;
+}
+
+.decima {
+  top: 60%;
+  left: 20%;
+}
+
+.estrella:nth-child(2n) {
+  -webkit-animation: estrella-par 2s infinite;
+}
+
+@-webkit-keyframes estrella-par {
+  0%, 90% {
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, .3);
+  }
+  100% {
+     box-shadow: 0 0 16px 16px rgba(255, 255, 255, .3);
+  
+  }
+}
+.estrella:nth-child(2n+1) {
+  -webkit-animation: estrella-impar 2s infinite;
+}
+
+@-webkit-keyframes estrella-impar {
+  0%, 35%, 50% {
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, .3);
+  }
+  45% {
+     box-shadow: 0 0 16px 16px rgba(255, 255, 255, .3);
+  
+  }
+}
